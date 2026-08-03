@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+ 
+    <title>PageTitleXYZ</title>
+</head>
+<body>
+    <p id="hover">Welcome to Bank</p>
+    <p id="demo">This is the steps to followed to get the Diwali coupan<br>
+    1.Enter your customer Id<br>
+    2.Click on validate customer.<br>
+    3.Click on get coupan.<br>
+     </p>
+    
+     <input type="button" value="Register" onclick="hide_steps()" ><br><br>
+    <p>
+        Enter customer Id:
+        <input id="custId" type="text" name="customerId"><br>
+        <input type="button" onclick="validateCustomer()" value="Validate Customer ">
+        <input type="button" onclick="generateCoupan()" value="Generate coupan">
+
+
+    </p> 
+    
+   <script>
+    // function trigger(){
+    //     document.getElementById("hover").addEventListener("mouseover",popup);
+    //     function popup(){
+    //         alert("Welcome to XYZ Bank");
+    //     }
+    // }
+    function hide_steps(){
+        document.getElementById("demo").style.display="none";
+
+    }
+    function validateCustomer(){
+        var custId=document.getElementById("custId").value;
+    
+        var validatecust=custId.includes("XYZ");
+        if(validatecust){
+           alert("Validation Successfull");
+        }else if(custId==""){
+            alert("Customer id can't be empty");
+        }
+        else{
+            document.write("Your customer id is wrong");
+        }
+    }
+    function generateCoupan(){
+        var custId=document.getElementById("custId").value;
+        var x=custId+9789;
+        var validatecust=custId.includes("XYZ");
+        if(validatecust){
+            document.write("Your coupan code is "+x);
+        }else if(custId==""){
+            alert("Customer id can't be empty");
+        }
+        else{
+            document.write("Your customer id is wrong");
+        }
+    }
+    trigger();
+</script> 
+</body>
+
+</html>
