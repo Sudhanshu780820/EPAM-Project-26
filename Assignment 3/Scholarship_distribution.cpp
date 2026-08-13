@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 int maxStudent(int N, int B, vector<int>MinSch){
+    //N=No. of students
+    //B= Budget
     if(N==0 || B==0){
         return 0;
     }
